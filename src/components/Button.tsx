@@ -1,19 +1,22 @@
-interface TButton {
+import React from "react";
+type TButton = {
   type: "submit" | "button";
   title: string;
   variant: "outline" | "filled";
-  disabled?: boolean;
-  className?: string;
   onClick?: () => void;
-}
+  className?: string;
+  titleClass?: string;
+  disabled?: boolean;
+};
 
 const Button = ({
-  type,
+  type = "button",
+  variant = "filled",
   title,
-  variant,
-  disabled,
-  className,
   onClick,
+  className,
+  titleClass,
+  disabled,
 }: TButton) => {
   const outline = "";
   const filled =
@@ -28,7 +31,7 @@ const Button = ({
       onClick={onClick}
     >
       <span
-        className={`${className} ${
+        className={`${titleClass} ${
           variant === "filled"
             ? "[text-shadow:0px_2px_1px_#030712] text-white"
             : ""

@@ -5,6 +5,7 @@ import UpgradeBanner from "./components/UpgradeBanner";
 import Todo from "./components/Todo";
 import Form from "./components/Form";
 import avatar from "./assets/avatar.png";
+import Button from "./components/Button";
 
 const taskItems: TTask[] = [
   {
@@ -77,7 +78,7 @@ const App = () => {
 
   return (
     <div className="flex h-screen w-screen bg-[#F3F3F3]">
-      <div className="w-4/12 shadow-xl shadow-black/40 h-full">
+      <div className="relative w-4/12 shadow-xl shadow-black/40 h-full">
         <SectionHeader alignment="left">
           <div className="flex gap-5 max-w-[292px]">
             <img src={avatar} className="h-[50px] w-[50px] rounded-full" />
@@ -101,6 +102,7 @@ const App = () => {
             />
           ))}
         </div>
+        <Button title='+' onClick={resetFormState} variant='filled' type='button' className='absolute bottom-6 right-4 text-[36px] w-[60px] h-[61px] rounded-full shadow-[inset_0_5px_3px_-3px_rgba(255,255,255,0.2)]' />
       </div>
       <div className="w-8/12">
         <SectionHeader alignment="center">
