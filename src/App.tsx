@@ -83,7 +83,7 @@ const App = () => {
             <img src={avatar} className="h-[50px] w-[50px] rounded-full" />
 
             <div>
-              <h6 className="text-[16px] [text-shadow:0px_2px_1px_#030712] font-medium leading-[19px] text-white mb-1">
+              <h6 className="text-[16px] [text-shadow:0px_2px_1px_#030712] font-medium leading-[19px] text-white mb-2">
                 Hello, John
               </h6>
               <h4 className="text-[25px] [text-shadow:0px_2.5px_1px_#030712] font-thin italic leading-[26px] text-white">
