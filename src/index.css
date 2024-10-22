@@ -4,12 +4,16 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
+* {
+  font-family: "Roboto", sans-serif;
 }
 
-ul, li {
-  margin: 0;
-  padding: 0
+html {
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
+  .animate {
+    @apply duration-200 ease-in-out transition-all
+  }
 }

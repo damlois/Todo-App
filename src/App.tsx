@@ -93,12 +93,14 @@ const App = () => {
           </div>
         </SectionHeader>
         <UpgradeBanner />
-        {tasks.map((task) => (
-          <Todo
-            key={task.id}
-            {...{ task, setIsEdit, setSelectedTask, toggleTask }}
-          />
-        ))}
+        <div className="relative p-4 pb-[60px] overflow-auto h-[calc(100vh_-_249px)]">
+          {tasks.map((task) => (
+            <Todo
+              key={task.id}
+              {...{ task, setIsEdit, setSelectedTask, toggleTask }}
+            />
+          ))}
+        </div>
       </div>
       <div className="w-8/12">
         <SectionHeader alignment="center">
